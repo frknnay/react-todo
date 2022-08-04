@@ -17,7 +17,7 @@ function Task({ id, isDone, value, onRemoveClick, onDoneClick }) {
     >
       <button
         type="button"
-        className={styles.button}
+        className={cn(styles.button, styles.toggleButton)}
         onClick={() => onDoneClick(id)}
         data-testid={`task-${id}-toggle-button`}
       >

@@ -1,5 +1,8 @@
+$task-default-bg-color: #7585a9;
+$task-done-bg-color: #8bb282;
+
 .task {
-  background-color: #7585a9;
+  background-color: $task-default-bg-color;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -12,10 +15,16 @@
   }
 
   &.done {
-    background-color: #8bb282;
+    background-color: $task-done-bg-color;
 
     .value {
       text-decoration: line-through;
+    }
+
+    .button.toggleButton:hover {
+      svg {
+        color: $task-default-bg-color;
+      }
     }
   }
 
@@ -36,5 +45,21 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    svg {
+      transition: 0.3s ease color;
+    }
+
+    &:hover {
+      svg {
+        color: red;
+      }
+
+      &.toggleButton {
+        svg {
+          color: $task-done-bg-color;
+        }
+      }
+    }
   }
 }
