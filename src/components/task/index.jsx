@@ -18,14 +18,18 @@ function Task({ id, isDone, value, onRemoveClick, onDoneClick }) {
         type="button"
         className={styles.button}
         onClick={() => onDoneClick(id)}
+        data-testid={`task-${id}-toggle-button`}
       >
         {isDone ? <CheckedCircleIcon /> : <CircleIcon />}
       </button>
-      <div className={styles.value}>{value}</div>
+      <div className={styles.value} data-testid={`task-${id}-value`}>
+        {value}
+      </div>
       <button
         className={styles.button}
         onClick={() => onRemoveClick(id)}
         type="submit"
+        data-testid={`task-${id}-remove-button`}
       >
         <TrashIcon />
       </button>
