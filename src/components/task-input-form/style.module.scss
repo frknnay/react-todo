@@ -1,0 +1,18 @@
+.inputForm {
+  width: 100%;
+
+  input {
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 20px;
+    background-color: #3b3b3b;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
