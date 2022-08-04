@@ -14,6 +14,7 @@ describe('Task Component', () => {
         tasks={mockTasks}
         onTaskDone={() => {}}
         onTaskRemove={() => {}}
+        onTaskEdit={() => {}}
       />
     );
     expect(taskComponent).not.toBeUndefined();
@@ -24,6 +25,7 @@ describe('Task Component', () => {
       <TaskList
         onTaskDone={() => {}}
         onTaskRemove={() => {}}
+        onTaskEdit={() => {}}
         tasks={mockTasks}
       />
     );
@@ -40,6 +42,7 @@ describe('Task Component', () => {
       <TaskList
         onTaskDone={handleTaskDone}
         onTaskRemove={handleTaskRemove}
+        onTaskEdit={() => {}}
         tasks={mockTasks}
       />
     );

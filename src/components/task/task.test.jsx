@@ -8,6 +8,8 @@ describe('Task Component', () => {
       <Task
         onDoneClick={() => {}}
         onRemoveClick={() => {}}
+        onEdit={() => {}}
+        onEditClick={() => {}}
         value="Test task"
         isDone
         id={3}
@@ -21,13 +23,15 @@ describe('Task Component', () => {
       <Task
         onDoneClick={() => {}}
         onRemoveClick={() => {}}
+        onEditClick={() => {}}
+        onEdit={() => {}}
         value="Test task"
         isDone
         id={3}
       />
     );
 
-    expect(screen.getByTestId('task-3-value').innerHTML).toEqual('Test task');
+    expect(screen.getByTestId('task-3-value').value).toEqual('Test task');
   });
 
   it('callbacks are returning the correct data', () => {
@@ -38,6 +42,8 @@ describe('Task Component', () => {
       <Task
         onDoneClick={handleDoneClick}
         onRemoveClick={handleRemoveClick}
+        onEditClick={() => {}}
+        onEdit={() => {}}
         value="Test task"
         isDone
         id={3}

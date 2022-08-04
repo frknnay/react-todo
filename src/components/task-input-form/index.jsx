@@ -31,6 +31,7 @@ function TaskInput({ onSubmit }) {
         placeholder="Enter your task!"
         value={taskValue}
         onChange={handleInputChange}
+        data-testid="new-task-input"
       />
     </form>
   );
