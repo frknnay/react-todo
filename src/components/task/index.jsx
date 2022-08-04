@@ -13,6 +13,7 @@ function Task({ id, isDone, value, onRemoveClick, onDoneClick }) {
       className={cn(styles.task, {
         [styles.done]: isDone,
       })}
+      data-testid={`task-${id}`}
     >
       <button
         type="button"
