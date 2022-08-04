@@ -68,11 +68,28 @@ function useHome() {
     setTasks(editedTasks);
   };
 
+  const handleTaskEdit = (data) => {
+    if (!data.id || !data.value) {
+      return;
+    }
+
+    const editedTasks = tasks.map((task) => {
+      if (task.id === data.id) {
+        return { ...task, value: data.value };
+      }
+
+      return task;
+    });
+
+    setTasks(editedTasks);
+  };
+
   return {
     tasks,
     handleTaskFormSubmit,
     handleTaskRemove,
     handleTaskDone,
+    handleTaskEdit,
     isLoading,
   };
 }

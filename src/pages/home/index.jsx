@@ -10,6 +10,7 @@ function HomePage() {
     handleTaskDone,
     handleTaskFormSubmit,
     handleTaskRemove,
+    handleTaskEdit,
     isLoading,
   } = useHome();
 
@@ -27,6 +28,7 @@ function HomePage() {
           tasks={tasks}
           onTaskRemove={handleTaskRemove}
           onTaskDone={handleTaskDone}
+          onTaskEdit={handleTaskEdit}
         />
       </div>
     </div>
