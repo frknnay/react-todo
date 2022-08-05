@@ -28,7 +28,7 @@ function TaskInput({ onSubmit }) {
     <form onSubmit={handleFormSubmit} className={styles.inputForm}>
       <input
         type="text"
-        placeholder="Enter your task!"
+        placeholder="Enter your task! Then press enter!"
         value={taskValue}
         onChange={handleInputChange}
         data-testid="new-task-input"
