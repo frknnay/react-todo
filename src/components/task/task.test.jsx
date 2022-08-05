@@ -31,7 +31,7 @@ describe('Task Component', () => {
       />
     );
 
-    expect(screen.getByTestId('task-3-value').value).toEqual('Test task');
+    expect(screen.getByTestId('task-3-value').innerHTML).toEqual('Test task');
   });
 
   it('callbacks are returning the correct data', () => {

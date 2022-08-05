@@ -45,15 +45,21 @@ function Task({
         {isDone ? <CheckedCircleIcon /> : <CircleIcon />}
       </button>
       <form onSubmit={handleEditFormSubmit}>
-        <input
-          type="text"
-          className={styles.value}
-          data-testid={`task-${id}-value`}
-          value={isBeingEdited ? tempValue : value}
-          disabled={!isBeingEdited}
-          onChange={handleInputChange}
-          ref={inputRef}
-        />
+        {isBeingEdited ? (
+          <input
+            type="text"
+            className={styles.value}
+            data-testid={`task-${id}-value`}
+            value={isBeingEdited ? tempValue : value}
+            disabled={!isBeingEdited}
+            onChange={handleInputChange}
+            ref={inputRef}
+          />
+        ) : (
+          <div data-testid={`task-${id}-value`} className={styles.value}>
+            {value}
+          </div>
+        )}
       </form>
       <button
         className={cn(styles.button, styles.editButton)}

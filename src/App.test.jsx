@@ -12,7 +12,7 @@ describe('TodoApp', () => {
   it('renders initial items', () => {
     render(<App />);
 
-    expect(screen.getByDisplayValue('Get hired!')).toBeDefined();
+    expect(screen.getByText('Get hired!')).toBeDefined();
   });
 
   it('can add todo', () => {
@@ -22,7 +22,7 @@ describe('TodoApp', () => {
     fireEvent.change(taskInput, { target: { value: 'Water the plants' } });
     fireEvent.submit(taskInput);
 
-    expect(screen.getByDisplayValue('Water the plants')).toBeDefined();
+    expect(screen.getByText('Water the plants')).toBeDefined();
   });
 
   it('can delete todo', () => {
